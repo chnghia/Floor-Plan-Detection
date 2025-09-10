@@ -1,10 +1,11 @@
 from utils.FloorplanToBlenderLib import *
 from subprocess import check_output
+import config
 import os
 
 
 def createFloorPlan(image_path = config.image_path, target_path = config.target_path, SR_Check=True):
-    import config 
+    # import config 
     SR= [config.SR_scale,config.SR_method]
     program_path = config.program_path
     blender_install_path = config.blender_install_path
