@@ -33,6 +33,7 @@ def generate_all_files(imgpath, info, position=None, rotation=None, CubiCasa=Fal
     @Return path to generated file, shape
     '''
     global path
+    print(f"generate_all_files - CubiCasa: {CubiCasa}")
     if CubiCasa == True:
         import numpy as np
         if SR!=None:
@@ -641,8 +642,10 @@ def generate_walls_file(img_path, info, CubiCasa=False, polygons=[],types=[]):
     @Param info, boolean if data should be printed
     @Return shape
     '''
+    print(f"generate_walls_file - CubiCasa: {CubiCasa}")
     # Get Boxes from CubiCasa workflow
     if CubiCasa == True:
+        
         
         from shapely.geometry import MultiPolygon, Polygon
         from shapely.ops import cascaded_union
